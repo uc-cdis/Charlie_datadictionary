@@ -1,0 +1,117 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "diagnosis"
+title: Diagnosis
+type: object
+namespace: https://niaid.bionimbus.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data from the investigation, analysis and recognition of the presence and nature of disease,
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: subjects
+    backref: diagnoses
+    label: describes
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+  - primary_diagnosis
+  - version_data
+  - visit_id
+
+preferred:
+  - year_of_diagnosis
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+   # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      Visit identifier
+    type: integer
+
+  year_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/year_of_diagnosis"
+    type:
+      - number
+      - "null"
+
+  comorbidity:
+    description: >
+      The simultaneous presence of two chronic diseases or conditions in a patient
+    type: boolean
+
+  comorbidity_hiv:
+    description: >
+      Presence of HIV as comorbidity
+    type: boolean
+
+  comorbidity_hepatic_disease:
+    description: >
+      Presence of hepatic disease as comorbidity
+    type: boolean
+
+  comorbidity_renal_disease:
+    description: >
+        Presence of renal disease as comorbidity
+    type: boolean
+
+  comorbidity_anemia:
+    description: >
+        Presence of anemia as comorbidity
+    type: boolean
+
+  comorbidity_diabetes:
+    description: >
+        Presence of diabetes as comorbidity
+    type: boolean
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
