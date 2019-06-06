@@ -1,0 +1,20 @@
+language: python
+python:
+- '2.7'
+before_script:
+- yes | python setup.py install
+- git clone https://github.com/uc-cdis/dictionaryutils; cd dictionaryutils
+script:
+- "./run_tests.sh"
+deploy:
+  provider: s3
+  access_key_id: AKIAZRNPHKJIGILBEKFN
+  secret_access_key:
+    secure: tC+ilJ1AQQoQG8jaaWNo+WaCgr5Z7676pauYVFziNrLD4mmkl6mAU2nCs0trXx2iCCRCBHlnFnAfnWj3QXrTAHSPuA5lrhcz46FF9tQPD8zdtSw/25aP/M2hize1Ja+olR6Y+8SNBU6ffOxu7+ElCrdRXAqDyPbjNr5Zk/bDEE7rH2h0uqy+Hv/1EmL55Ss/Z0eXtTm0La2MAdynztKkAo4f7NnPqGLVvFiEvxCYJBkS48DH2abrDzeIa4f+I2D5s/VtchntaWArdJjF7pPfIhmhUiOb0Dohiwr2WAlbTByWisam0t4rMmmcm+7CZGQQx2FwulNWYj3ki4sYX9vlX3AOqKa83XDvnNpXx0I8DlWEHQ37stCLo0uZRL6hQWfIU4tOYOQI5VP2SF33EOL9xXxQSs0+zVEgaQRwF3N0si2EnQOMGDacHfm5ORlaqdCQn0Ljse1TgsUYA2PNQk6eSbG5uZrKzcuj3Bfcj3UboVlytpeKyuX77QKHzJ0E1S1ibC4JRvUx+c9s97b//x06ork9PYQGH6zpyVpqaFXuAgMqWDePLkT7QnPxtDSeEXT6cFi17oyxsVtyg8ZzUE1/FnI4XCB1jfirJO90NmsU/2tmkIM3ALV7es42gzlJn0kyAoKr6nW4Ez0Bjpx/EFZU4iuU4hvpkon9EOTrPkeo02k=
+  bucket: dictionary-artifacts
+  local-dir: artifacts
+  upload-dir: charlie-datadictionary/$TRAVIS_BRANCH
+  skip_cleanup: true
+  on:
+    repo: uc-cdis/Charlie_datadictionary
+    all_branches: true
