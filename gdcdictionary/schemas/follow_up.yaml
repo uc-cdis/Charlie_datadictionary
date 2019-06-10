@@ -60,25 +60,9 @@ properties:
     maximum: 89
     minimum: 0
 
-  age_at_visit_gt89:
-    description: >
-      Indicate if the age at visit years is greater than 89.
-    enum:
-      - "Yes"
-      - "No"
-
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
-
-  drug_used:
-    description: >
-      Ever used any medical or recreational drugs since last visit
-    enum:
-      - "No"
-      - "Yes"
-      - "Refusal"
-      - "Unknown"
 
   ever_transferred:
     description: >
@@ -115,16 +99,6 @@ properties:
       Visit number
     type: integer
 
-  visit_id:
-    description: >
-      ID at time of interview (prior to transfer)
-    type: integer
-
-  visit_name:
-    description: >
-      Visit ID (string)
-    type: string
-
   visit_type:
     description: >
       Define if the visit is a follow-up or the baseline visit.
@@ -146,11 +120,6 @@ properties:
   visit_date:
     description: >
       Year of the visit.
-    type: integer
-
-  tint:
-    description: >
-      6-month time interval for visit
     type: integer
 
   days_to_follow_up:
