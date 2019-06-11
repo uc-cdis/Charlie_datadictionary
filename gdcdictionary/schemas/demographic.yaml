@@ -100,6 +100,7 @@ properties:
         source: NCI Thesaurus
         term_id:  C43234
         term_version: 18.09d (Release date:2018-09-24)
+        
   race:
     term:
       $ref: "_terms.yaml#/race"
@@ -112,7 +113,7 @@ properties:
       - American Indian or Alaskan Native
       - Unspecified
       - Unknown
-- Other
+      - Other
     termDef:
       - term: Race
         source: NCI Thesaurus
