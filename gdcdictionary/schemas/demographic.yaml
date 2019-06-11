@@ -100,23 +100,19 @@ properties:
         source: NCI Thesaurus
         term_id:  C43234
         term_version: 18.09d (Release date:2018-09-24)
-
   race:
     term:
       $ref: "_terms.yaml#/race"
-    type: array
-    additionalItems: false
-    items:
-        enum:
-          - Asian
-          - White
-          - Black or African American
-          - Multi-racial
-          - Asian/Pacific Islander
-          - American Indian or Alaskan Native
-          - Unspecified
-          - Unknown
-          - Other
+    enum:
+      - Asian
+      - White
+      - Black
+      - Multi-racial
+      - Asian/Pacific Islander
+      - American Indian or Alaskan Native
+      - Unspecified
+      - Unknown
+- Other
     termDef:
       - term: Race
         source: NCI Thesaurus
