@@ -249,4 +249,4 @@ properties:
         term_version: 19.04f (Release date:2019-04-30)
 
   subjects:
-$ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
