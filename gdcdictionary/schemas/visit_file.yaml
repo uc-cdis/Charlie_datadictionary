@@ -67,10 +67,10 @@ links:
         target_type: summary_socio_demographic
         multiplicity: one_to_one
         required: false
-      - name: summary_drug_uses
+      - name: treatments
         backref: visit_files
         label: derived_from
-        target_type: summary_drug_use
+        target_type: treatment
         multiplicity: one_to_one
         required: false
 
@@ -127,7 +127,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
   summary_socio_demographics:
     $ref: "_definitions.yaml#/to_one"
-  summary_drug_uses:
+  treatments:
     $ref: "_definitions.yaml#/to_one"
   core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
