@@ -126,6 +126,11 @@ properties:
     description: >
       Year of the visit.
     type: integer
+    
+  tint:
+    description: >
+      6-month time interval for visit
+    type: integer
 
   days_to_follow_up:
     description: >
