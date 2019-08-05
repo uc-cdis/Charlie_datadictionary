@@ -442,10 +442,12 @@ properties:
 
   ccr5d32:
     description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. 
     type: number
 
   cd27:
     description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. 
     type: number
 
   crp:
@@ -520,10 +522,12 @@ properties:
 
   scd14:
     description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. This term is the same as s_cd14 but was collected at a different timepoint.  
     type: number
 
   s_cd14:
     description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. This term is the same as scd14 but was collected at a different timepoint.
     type: number
 
   sil2ra:
@@ -534,6 +538,7 @@ properties:
   stnfr2:
     description: >
     type: number
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. 
 
   tnfa:
     description: >
