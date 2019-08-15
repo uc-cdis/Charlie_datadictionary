@@ -38,7 +38,7 @@ links:
 required:
   - submitter_id
   - type
-  - diagnoses
+
 
 uniqueKeys:
   #unclear if want submitter ID for clinical
