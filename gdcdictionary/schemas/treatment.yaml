@@ -22,18 +22,21 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: diagnoses
-    backref: treatments
-    label: relates_to
-    target_type: diagnosis
-    multiplicity: many_to_one
-    required: false
-  - name: follow_ups
-    backref: treatments
-    label: performs_on
-    target_type: follow_up
-    multiplicity: one_to_one
-    required: false
+  - exclusive: false
+    required: true
+    subgroup:
+    - name: diagnoses
+      backref: treatments
+      label: relates_to
+      target_type: diagnosis
+      multiplicity: many_to_one
+      required: false
+    - name: follow_ups
+      backref: treatments
+      label: performs_on
+      target_type: follow_up
+      multiplicity: one_to_one
+      required: false
 
 required:
   - submitter_id
