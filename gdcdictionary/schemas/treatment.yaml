@@ -27,7 +27,7 @@ links:
     label: relates_to
     target_type: diagnosis
     multiplicity: many_to_one
-    required: true
+    required: false
   - name: follow_ups
     backref: treatments
     label: performs_on
@@ -1274,6 +1274,15 @@ properties:
   gcv:
     description: >
       Used Ganciclovir (DHPG) (125) since last visit
+    enum:
+      - "No"
+      - "Yes"
+      - "Uncertain"
+      - "Missing"
+      
+  gcvv:
+    description: >
+      Used Ganciclovir (DHPG) (125) at visit
     enum:
       - "No"
       - "Yes"
