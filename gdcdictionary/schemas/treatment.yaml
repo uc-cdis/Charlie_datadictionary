@@ -22,18 +22,21 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: diagnoses
-    backref: treatments
-    label: relates_to
-    target_type: diagnosis
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
-  - name: follow_ups
-    backref: treatments
-    label: performs_on
-    target_type: follow_up
-    multiplicity: one_to_one
-    required: false
+    subgroup:
+    - name: diagnoses
+      backref: treatments
+      label: relates_to
+      target_type: diagnosis
+      multiplicity: many_to_one
+      required: false
+    - name: follow_ups
+      backref: treatments
+      label: performs_on
+      target_type: follow_up
+      multiplicity: one_to_one
+      required: false
 
 required:
   - submitter_id
@@ -1274,6 +1277,15 @@ properties:
   gcv:
     description: >
       Used Ganciclovir (DHPG) (125) since last visit
+    enum:
+      - "No"
+      - "Yes"
+      - "Uncertain"
+      - "Missing"
+      
+  gcvv:
+    description: >
+      Used Ganciclovir (DHPG) (125) at visit
     enum:
       - "No"
       - "Yes"
