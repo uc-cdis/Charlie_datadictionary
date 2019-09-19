@@ -114,7 +114,7 @@ properties:
       - Frozen
       - Unknown
       - Not Reported
-      - Not Allowed To Collect
+
 
   sample_volume:
     description: "The volume of the sample in mL."
