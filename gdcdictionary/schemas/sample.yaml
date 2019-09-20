@@ -465,6 +465,43 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect    
+      
+  composition:
+    term:
+      $ref: "_terms.yaml#/composition"
+    enum:
+      - B cell
+      - Buccal Cells
+      - Buffy Coat
+      - Bone Marrow Components
+      - Bone Marrow Components NOS
+      - Cell
+      - Fibroblasts from Bone Marrow Normal
+      - Granulocytes
+      - Lymphocytes
+      - Mononuclear Cells from Bone Marrow Normal
+      - Peripheral Blood Components NOS
+      - Peripheral Blood Nucleated Cells
+      - Pleural Effusion
+      - Plasma
+      - Peripheral Whole Blood
+      - Serum
+      - Solid Tissue
+      - Whole Bone Marrow
+      - Unknown
+      - Macrophage
+      - Monocyte
+      - Not Reported
+      - Not Allowed To Collect
+      - Supernatant
+      - White Blood Cells
+      - Peripheral Blood Molecular Cell
+      - Carbohydrate
+      - Red Blood Cell
+      - T cell
+      - Dendritic cell
+      - NK cell
+      - Neutrophil      
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
