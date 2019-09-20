@@ -96,5 +96,10 @@ properties:
       - Not Specified
       - Other
 
+  species:
+    description: "Taxonomic species of the subject."
+    enum:
+     - Homo sapiens
+
   studies:
     $ref: "_definitions.yaml#/to_many"
