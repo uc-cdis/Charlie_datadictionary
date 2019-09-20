@@ -67,6 +67,7 @@ properties:
       The general objective of the study.
     enum:
       - "AIDS"
+      - "Healthy Controls"
       - "Not Applicable"
 
   study_completeness:
