@@ -131,6 +131,11 @@ properties:
     description: >
       Number of days between the date used for index and the date the patient was seen or contacted at follow-up.
     type: integer
+    
+  visit_id:
+    description: >
+      ID at time of interview (prior to transfer)
+    type: integer    
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
