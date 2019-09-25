@@ -27,7 +27,7 @@ links:
       label: performs_on
       target_type: visit
       multiplicity: one_to_one
-      required: false
+      required: true
 
 required:
   - submitter_id
