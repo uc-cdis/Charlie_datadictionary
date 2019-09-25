@@ -22,15 +22,6 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
-    required: true
-    subgroup:
-    - name: diagnoses
-      backref: treatments
-      label: relates_to
-      target_type: diagnosis
-      multiplicity: many_to_one
-      required: false
     - name: follow_ups
       backref: treatments
       label: performs_on

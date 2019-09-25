@@ -40,25 +40,6 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  dominant_hand:
-    description: >
-      Hand the subject use to write
-    enum:
-      - Right
-      - Left
-
-  employment_status:
-    description: >
-      Current employment status
-    enum:
-      - Working full-time
-      - Working part-time
-      - Unemployed but seeking work
-      - Unemployed not seeking work
-      - Student
-      - Retired
-      - Disability
-
   highest_education:
     description: >
       Highest grade or level of regular school or college that the subject finished or got credit for
@@ -75,6 +56,15 @@ properties:
     description: >
       Does the participant have insurance coverage?
     type: boolean
+
+  drug_used:
+    description: >
+      Ever used any medical or recreational drugs since last visit
+    enum:
+      - "No"
+      - "Yes"
+      - "Refusal"
+      - "Unknown"  
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
