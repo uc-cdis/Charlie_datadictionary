@@ -498,7 +498,7 @@ properties:
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
-  follow_ups:
+  visits:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
