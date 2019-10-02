@@ -37,17 +37,10 @@ links:
     multiplicity: many_to_one
     required: true
 
-  - name: follow_ups
+  - name: visits
     backref: samples
     label: related_to
-    target_type: follow_up
-    multiplicity: many_to_one
-    required: false
-
-  - name: diagnoses
-    backref: samples
-    label: related_to
-    target_type: diagnosis
+    target_type: visit
     multiplicity: many_to_one
     required: false
 
@@ -505,7 +498,7 @@ properties:
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
-  follow_ups:
+  visits:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

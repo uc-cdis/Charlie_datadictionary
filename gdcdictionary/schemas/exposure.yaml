@@ -40,25 +40,6 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  dominant_hand:
-    description: >
-      Hand the subject use to write
-    enum:
-      - Right
-      - Left
-
-  employment_status:
-    description: >
-      Current employment status
-    enum:
-      - Working full-time
-      - Working part-time
-      - Unemployed but seeking work
-      - Unemployed not seeking work
-      - Student
-      - Retired
-      - Disability
-
   highest_education:
     description: >
       Highest grade or level of regular school or college that the subject finished or got credit for
@@ -75,6 +56,244 @@ properties:
     description: >
       Does the participant have insurance coverage?
     type: boolean
+
+  drug_used:
+    description: >
+      Ever used any medical or recreational drugs since last visit
+    enum:
+      - "No"
+      - "Yes"
+      - "Refusal"
+      - "Unknown"  
+
+  ageatbl:
+    description: >
+      Age at Baseline visit. If the age at baseline visit is greater than 89, see 'ageatbl_gt89'.
+    type: number
+    maximum: 89
+    minimum: 0
+
+  ageatbl_gt89:
+    description: >
+      Indicate whether the Age at Baseline visit is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
+
+  eductn:
+    description: >
+      Highest level of education (baseline visit)
+    enum:
+      - "No schooling"
+      - "Grades 1-6"
+      - "Grades 7-11"
+      - "Completed high school"
+      - "Some college"
+      - "Completed 4 years of college"
+      - "Attended/Completed graduate school"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  sexident:
+    description: >
+      Sexual identity (baseline visit)
+    enum:
+      - "Heterosexual/Straight"
+      - "Bisexual"
+      - "Lesbian/Gay"
+      - "Other"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basepot:
+    description: >
+      Ever used marijuana/hash (baseline visit)
+    type: boolean
+
+  basecch:
+    description: >
+      Ever used crack/cocaine/ heroin (baseline visit)
+    type: boolean
+
+  basecrack:
+    description: >
+      Ever used crack/freebase cocaine (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  basecoc:
+    description: >
+      Ever used cocaine (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  baseher:
+    description: >
+      Ever used heroin (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  basemdon:
+    description: >
+      Ever used (illicit) methadone (baseline visit)
+    type: boolean
+
+  baseidu:
+    description: >
+      Participant ever injected drugs (baseline visit, based on self-report, F00/IDU_SC, F20/IDU_NR, INJCNR)
+    type: boolean
+
+  basenidu:
+    description: >
+      Non-injected recreational drugs ever used (baseline visit). Baseline rec drug use questions change over time. This may include CCH use, amphetamines, any marijuana, use, hallucinogens, club drugs, methamphetamines.
+    type: boolean
+
+  basemdonrx:
+    description: >
+      Ever in methadone maintenance program or reported prescribed use of methadone at baseline visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basesbxnrx:
+    description: >
+      Ever in suboxone maintenance program (V39+) or reported prescribed use of suboxone at baseline visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked at B/L for 1994/95, 2001/02, 2011-13 recruits"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basesex:
+    description: >
+      Number of sex partners (baseline visit)
+    enum:
+      - "0 or no partners"
+      - "1 to 4 partners"
+      - "5 to 10 partners"
+      - "11 to 100 partners"
+      - "More than 100 partners"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basetran:
+    description: >
+      Blood transfusion between 1975-1985 (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basemsex:
+    description: >
+      # lifetime male sex partners (baseline visit)
+    type: integer
+
+  baseminj:
+    description: >
+      Ever had sex with male who injected (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basemhem:
+    description: >
+      Ever had sex with male hemophiliac (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basemhiv:
+    description: >
+      Ever had sex with HIV+ male (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basemman:
+    description: >
+      Ever sex w/male who had sex w/ male (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basefsex:
+    description: >
+      # lifetime female partners (baseline visit)
+    type: integer
+
+  basefinj:
+    description: >
+      Ever had sex with woman who injected (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  basefhiv:
+    description: >
+      Ever had sex with HIV+ woman (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  paidsex:
+    description: >
+      Ever had sex for drugs,money, shelter (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Unknown"
+      - "Missing"
+
+  riskcat:
+    description: >
+      Exposure Category(baseline visit)
+    enum:
+      - "Intravenous drug use"
+      - "Heterosexual risk"
+      - "Transfusion risk"
+      - "No identified risk"
+      - "Missing"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"

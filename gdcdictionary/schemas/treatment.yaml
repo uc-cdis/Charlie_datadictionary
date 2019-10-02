@@ -22,21 +22,12 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
-    required: true
-    subgroup:
-    - name: diagnoses
-      backref: treatments
-      label: relates_to
-      target_type: diagnosis
-      multiplicity: many_to_one
-      required: false
-    - name: follow_ups
+    - name: visits
       backref: treatments
       label: performs_on
-      target_type: follow_up
+      target_type: visit
       multiplicity: one_to_one
-      required: false
+      required: true
 
 required:
   - submitter_id
@@ -1603,5 +1594,5 @@ properties:
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
 
-  follow_ups:
+  visits:
     $ref: "_definitions.yaml#/to_one"

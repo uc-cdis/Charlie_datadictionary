@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: follow_ups
+  - name: visits
     backref: health_questionnaires
     label: performed_at
-    target_type: follow_up
+    target_type: visit
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - follow_ups
+  - visits
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -355,5 +355,5 @@ properties:
       - Mostly false
       - Definitively false
 
-  follow_ups:
+  visits:
     $ref: "_definitions.yaml#/to_one"
