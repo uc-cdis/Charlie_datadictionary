@@ -532,7 +532,7 @@ properties:
 
   sil2ra:
     description: >
-      The determination of the amount of monocyte chemotactic protein 1 present in a sample.  Human CCL2 wild-type allele is located within 17q11.2-q12 and is approximately 2 kb in length. This allele, which encodes C-C motif chemokine 2 protein, is involved in the mediation of immune cell chemotaxis during tissue injury.
+      Serum levels of soluble interleukin-2 receptor alpha (sIL-2Ra).
     type: number
 
   stnfr2:
